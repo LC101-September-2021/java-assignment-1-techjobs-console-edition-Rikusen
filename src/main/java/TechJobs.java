@@ -131,6 +131,6 @@ public class TechJobs {
                 System.out.println("*****");
             }
         }
-        else System.out.println("No Results Found");
+        else System.out.println("No Results");
     }
 }
