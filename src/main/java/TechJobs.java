@@ -123,7 +123,6 @@ public class TechJobs {
         if (someJobs.size() > 0) {
 
             for (HashMap<String, String> job : someJobs) {
-                System.out.println("");
                 System.out.println("*****");
                 for (Map.Entry<String, String> entry : job.entrySet()) {
                     System.out.println(entry.getKey() + ": " + entry.getValue());
