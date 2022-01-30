@@ -14,7 +14,7 @@ public class TechJobs {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
-        columnChoices.put("core competency", "Skill");
+        columnChoices.put("core competency", "Skill\n");
         columnChoices.put("employer", "Employer");
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
@@ -44,7 +44,7 @@ public class TechJobs {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
-                    System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
+                    System.out.println("*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
                     for (String item : results) {
@@ -58,7 +58,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.println("\nSearch term:");
+                System.out.println("Search term:");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -91,7 +91,7 @@ public class TechJobs {
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
-                System.out.println("" + j + " - " + choices.get(choiceKeys[j]));
+                System.out.println(j + " - " + choices.get(choiceKeys[j]));
             }
 
             if (in.hasNextInt()) {
@@ -115,6 +115,7 @@ public class TechJobs {
         } while(!validChoice);
 
         return choiceKeys[choiceIdx];
+
     }
 
     // Print a list of jobs
@@ -123,13 +124,13 @@ public class TechJobs {
         if (someJobs.size() > 0) {
 
             for (HashMap<String, String> job : someJobs) {
-                System.out.println('\n'+"*****");
+                System.out.println("\n*****");
                 for (Map.Entry<String, String> entry : job.entrySet()) {
                     System.out.println(entry.getKey() + ": " + entry.getValue());
                 }
                 System.out.println("*****");
             }
         }
-        else System.out.println("No Results");
+        else System.out.print("No Results");
     }
 }
