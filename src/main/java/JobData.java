@@ -101,7 +101,7 @@ public class JobData {
         ArrayList<HashMap<String,String>> jobs = new ArrayList<>();
         String text = value.toLowerCase();
 
-        System.out.println(text);
+//        System.out.println(text);
 
         for(HashMap<String,String> job : allJobs){
             for(Map.Entry<String,String> m :job.entrySet()){
